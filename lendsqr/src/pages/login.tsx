@@ -2,8 +2,25 @@ import React from 'react';
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Flex, Select } from 'antd';
+import { Icon } from '@iconify/react';
+import Logo from '../assets/Image/logo-lendsqr.png'
+import '../Scss/search-header.css'
+import CollapseMenu from '../pages/collapse-menu'
+import '../Scss/search-header.css'
+import HeaderAvarta from '../assets/Image/avatar.png'
+import '../Scss/search-header.css'
 import { Link } from 'react-router-dom';
 import '../Scss/login.css';
+
+import { Input } from 'antd';
+import type { SearchProps } from 'antd/es/input/Search';
+const { Search } = Input;
+import { Collapse } from 'antd';
+import '../Scss/collapse-menu.css'; 
+
+
+const onSearch: SearchProps['onSearch'] = (value, _e, info) => console.log(info?.source, value);
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -40,20 +57,49 @@ const App: React.FC = () => {
 
   return (
     <Layout>
-      <Header>
-         <nav className='link-nav'>
-           <ul>
-             <li>
-               <Link to="/">Login</Link>
-             </li>
-             <li>
-               <Link to="/dashboard">Dashboard</Link>
-             </li>
-             <li>
-               <Link to="/user">User</Link>
-             </li>
-           </ul>
-         </nav>
+      <Header className='header-wrap'>
+        <div className="logo-image">
+          <img className='logo' src={Logo} alt="logo" />
+        </div>
+        <Search className='search-input' placeholder="input search text" onSearch={onSearch} enterButton />
+        {/* <nav className='link-nav'>
+          <ul>
+            <li>
+              <Link to="/">Login</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/user">User</Link>
+            </li>
+          </ul>
+        </nav> */}
+        <nav>
+          <span>    <li>
+            <Link to="/">Docs</Link>
+          </li></span>
+          <span>
+            <Icon icon="gala:bell" width="20" height="32" />
+          </span>
+          <span>
+            <img className='avarta'  src={HeaderAvarta} alt="avarta" />
+          </span>
+          <span>
+     
+           <Select
+              // placeholder="Adedeji"
+              value="Adedeji"
+              variant="borderless"
+              style={{ flex: 1 }}
+              options={[
+                { value: 'Harrison', label: 'Harrison' },
+                { value: 'Adedeji', label: 'Adedeji' },
+                { value: 'Improve', label: 'Improve' },
+              ]}
+            />
+          </span>
+        </nav>
       </Header>
       <Content style={{ padding: '0 48px', border: '5px solid red' }}>
         <Breadcrumb style={{ margin: '16px 0' }}>
@@ -62,16 +108,17 @@ const App: React.FC = () => {
           <Breadcrumb.Item>App</Breadcrumb.Item>
         </Breadcrumb>
         <Layout
-          style={{ padding: '24px 0', border: '5px solid blue',background: colorBgContainer, borderRadius: borderRadiusLG }}
+          style={{ padding: '24px 0', border: '5px solid blue', background: colorBgContainer, borderRadius: borderRadiusLG }}
         >
           <Sider style={{ background: colorBgContainer }} width={200}>
-            <Menu
+            {/* <Menu
               mode="inline"
               defaultSelectedKeys={['1']}
               defaultOpenKeys={['sub1']}
               style={{ height: '100%' }}
               items={items2}
-            />
+            /> */}
+            <CollapseMenu />
           </Sider>
           <Content style={{ padding: '0 24px', minHeight: 280 }}>
             <div className="wrap">

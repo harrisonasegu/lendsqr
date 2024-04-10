@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// styles.css
+.custom-collapse {
+  background-color: #f0f0f0;
+  border: 11px solid red;
+  border-radius: 5px;
+}
+
+.custom-collapse .ant-collapse-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-collapse .ant-collapse-header {
+  color: #333;
+  font-weight: bold;
+}
+
+.custom-collapse .ant-collapse-content {
+  padding: 10px;
+}

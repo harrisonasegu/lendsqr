@@ -4,11 +4,43 @@
   box-sizing: border-box;
 }
 
-.link-nav {
-    border: 5px solid red;
+.header-wrap {
+  border: 5px solid red;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // Image logo
+  &>.logo-image {
+    .logo {
+      width: 100px;
+    }
+  }
+
+  .link-nav {
+    border: 2px solid green;
+    widows: 100%;
     // background-color: red;
 
     ul {
       display: flex;
     }
   }
+
+  nav, li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    list-style-type: none;
+
+    span {
+      display: flex;
+      .avarta {
+        // border: px solid red;
+        width: 30px;
+     }
+    }
+  }
+}

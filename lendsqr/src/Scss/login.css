@@ -4,9 +4,34 @@
   box-sizing: border-box;
 }
 
-.link-nav {
+.header-wrap {
   border: 5px solid red;
-}
-.link-nav ul {
+  background-color: white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrap > .logo-image .logo {
+  width: 100px;
+}
+.header-wrap .link-nav {
+  border: 2px solid green;
+  widows: 100%;
+}
+.header-wrap .link-nav ul {
+  display: flex;
+}
+.header-wrap nav, .header-wrap li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  list-style-type: none;
+}
+.header-wrap nav span, .header-wrap li span {
+  display: flex;
+}
+.header-wrap nav span .avarta, .header-wrap li span .avarta {
+  width: 30px;
 }/*# sourceMappingURL=login.css.map */
