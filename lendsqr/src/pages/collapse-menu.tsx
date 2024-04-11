@@ -1,12 +1,9 @@
 import React from 'react';
 import type { CollapseProps } from 'antd';
 import { Collapse } from 'antd';
+const { Panel } = Collapse;
+import '../Scss/collapse-menu.css'
 
-const customCollapseStyles = () => {
-  return {
-    border: '4px solid green'
-  }
-}
 const items: CollapseProps['items'] = [
   {
     key: '1',
@@ -31,6 +28,31 @@ const items: CollapseProps['items'] = [
   },
 ];
 
-const layoutSlider: React.FC = () => <Collapse style={customCollapseStyles} className="custome-collapse" defaultActiveKey={['1']} ghost items={items} />;
+// const layoutSlider: React.FC = () => <Collapse style={customCollapseStyles} className="custome-collapse" defaultActiveKey={['1']} ghost items={items} />;
+
+const layoutSlider: React.FC = () => {
+  return (
+    <Collapse style={{ backgroundColor: 'white', border: '1px solid rgba(0, 0, 0, 0.100)' }}>
+      <Panel header="panel" key="1">
+        Content of anel 1
+      </Panel>
+      <Panel header="Panel 2" key="2">
+        Content of panel 2
+      </Panel>
+      <Panel header="Panel 2" key="2">
+        Content of panel 2
+      </Panel>
+      <Panel header="Panel 2" key="2">
+        Content of panel 2
+      </Panel>
+      <Panel header="Panel 2" key="2">
+        Content of panel 2
+      </Panel>
+      <Panel header="Panel 2" key="2">
+        Content of panel 2
+      </Panel>
+    </Collapse>
+  );
+};
 
 export default layoutSlider;

@@ -2,11 +2,11 @@ import React from 'react';
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
-import { Flex, Select } from 'antd';
+import { Select } from 'antd';
 import { Icon } from '@iconify/react';
 import Logo from '../assets/Image/logo-lendsqr.png'
 import '../Scss/search-header.css'
-import CollapseMenu from '../pages/collapse-menu'
+// import CollapseMenu from '../pages/collapse-menu'
 import '../Scss/search-header.css'
 import HeaderAvarta from '../assets/Image/avatar.png'
 import '../Scss/search-header.css'
@@ -16,7 +16,7 @@ import '../Scss/login.css';
 import { Input } from 'antd';
 import type { SearchProps } from 'antd/es/input/Search';
 const { Search } = Input;
-import { Collapse } from 'antd';
+// import { Collapse } from 'antd';
 import '../Scss/collapse-menu.css'; 
 
 
@@ -111,14 +111,14 @@ const App: React.FC = () => {
           style={{ padding: '24px 0', border: '5px solid blue', background: colorBgContainer, borderRadius: borderRadiusLG }}
         >
           <Sider style={{ background: colorBgContainer }} width={200}>
-            {/* <Menu
+            <Menu
               mode="inline"
               defaultSelectedKeys={['1']}
               defaultOpenKeys={['sub1']}
               style={{ height: '100%' }}
               items={items2}
-            /> */}
-            <CollapseMenu />
+            />
+            {/* <CollapseMenu /> */}
           </Sider>
           <Content style={{ padding: '0 24px', minHeight: 280 }}>
             <div className="wrap">
