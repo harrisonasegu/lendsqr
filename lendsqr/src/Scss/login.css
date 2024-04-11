@@ -34,4 +34,15 @@
 }
 .header-wrap nav span .avarta, .header-wrap li span .avarta {
   width: 30px;
+}
+
+.contents-wrap {
+  border: 2px solid green;
+}
+.contents-wrap > .cards-wrap {
+  border: 2px solid green;
+  width: 240px;
+  height: 160px;
+  border-radius: 4px 0px 0px 0px;
+  opacity: 0px;
 }/*# sourceMappingURL=login.css.map */

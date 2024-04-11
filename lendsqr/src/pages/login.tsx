@@ -5,8 +5,14 @@ import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { Select } from 'antd';
 import { Icon } from '@iconify/react';
 import Logo from '../assets/Image/logo-lendsqr.png'
+// The four icons for the cards
+import CardIcon1 from '../assets/Image/cardImage/one.png'
+import CardIcon2 from '../assets/Image/cardImage/two.png'
+import CardIcon3 from '../assets/Image/cardImage/three.png'
+import CardIcon4 from '../assets/Image/cardImage/four.png'
 import '../Scss/search-header.css'
 // import CollapseMenu from '../pages/collapse-menu'
+import Cards from '../pages/card'
 import '../Scss/search-header.css'
 import HeaderAvarta from '../assets/Image/avatar.png'
 import '../Scss/search-header.css'
@@ -121,8 +127,13 @@ const App: React.FC = () => {
             {/* <CollapseMenu /> */}
           </Sider>
           <Content style={{ padding: '0 24px', minHeight: 280 }}>
-            <div className="wrap">
-              <h1>Harrisonnnnnnnnnnnnnnnnn</h1>
+            <div className="contents-wrap">
+              <h1>User</h1>
+              <div className="cards-wrap">
+                <div className="card-image"></div>
+                <div className="card-users"></div>
+                <div className="card-number"></div>
+              </div>
             </div>
           </Content>
         </Layout>

@@ -44,3 +44,16 @@
     }
   }
 }
+
+.contents-wrap {
+  border: 2px solid green;
+
+  &>.cards-wrap {
+    border: 2px solid green;
+    width: 240px;
+    height: 160px;
+    border-radius: 4px 0px 0px 0px;
+    // border: 1px 0px 0px 0px;
+    opacity: 0px;
+  }
+}
