@@ -5,7 +5,7 @@
 }
 
 .header-wrap {
-  border: 5px solid red;
+  border: 2px solid blue;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -46,14 +46,61 @@
 }
 
 .contents-wrap {
-  border: 2px solid green;
-
-  &>.cards-wrap {
-    border: 2px solid green;
-    width: 240px;
-    height: 160px;
-    border-radius: 4px 0px 0px 0px;
-    // border: 1px 0px 0px 0px;
-    opacity: 0px;
+  // border: 2px solid green;
+  h1 {
+    color:  #213F7D;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px 0;
   }
+
+ .card-wrap {
+    // border: 2px solid blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    row-gap: 15px;
+    column-gap: 20px;
+    width: 100%;
+
+  &>.cards-contents {
+    // border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 209px;
+    height: 130px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.194);
+    row-gap: 10px;
+    opacity: 0px;
+    padding: 15px;
+  
+
+    .card-image {
+      img {
+        //  width: 50%;
+        background-color:  #e018ff32;
+        ;
+        border-radius: 50%;
+        width: 30px;
+      }
+    }
+
+    &>.card-users{
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    &>.card-number{
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+ }
+
+ &>.tableData-wrap {
+  margin-top: 50px;
+ }
 }

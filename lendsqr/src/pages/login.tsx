@@ -1,7 +1,7 @@
 import React from 'react';
 import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Layout, Menu, theme } from 'antd';
 import { Select } from 'antd';
 import { Icon } from '@iconify/react';
 import Logo from '../assets/Image/logo-lendsqr.png'
@@ -11,8 +11,8 @@ import CardIcon2 from '../assets/Image/cardImage/two.png'
 import CardIcon3 from '../assets/Image/cardImage/three.png'
 import CardIcon4 from '../assets/Image/cardImage/four.png'
 import '../Scss/search-header.css'
-// import CollapseMenu from '../pages/collapse-menu'
-import Cards from '../pages/card'
+import TableData from '../pages/table-data'
+// import Cards from '../pages/card'
 import '../Scss/search-header.css'
 import HeaderAvarta from '../assets/Image/avatar.png'
 import '../Scss/search-header.css'
@@ -107,14 +107,14 @@ const App: React.FC = () => {
           </span>
         </nav>
       </Header>
-      <Content style={{ padding: '0 48px', border: '5px solid red' }}>
-        <Breadcrumb style={{ margin: '16px 0' }}>
+      <Content style={{ padding: '0 48px', border: '2px solid blue' }}>
+        {/* <Breadcrumb style={{ margin: '16px 0' }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <Layout
-          style={{ padding: '24px 0', border: '5px solid blue', background: colorBgContainer, borderRadius: borderRadiusLG }}
+          style={{ padding: '24px 0', background: colorBgContainer, borderRadius: borderRadiusLG }}
         >
           <Sider style={{ background: colorBgContainer }} width={200}>
             <Menu
@@ -128,11 +128,59 @@ const App: React.FC = () => {
           </Sider>
           <Content style={{ padding: '0 24px', minHeight: 280 }}>
             <div className="contents-wrap">
-              <h1>User</h1>
-              <div className="cards-wrap">
-                <div className="card-image"></div>
-                <div className="card-users"></div>
-                <div className="card-number"></div>
+              <h1>Users</h1>
+              <div className="card-wrap">
+              <div className="cards-contents">
+                <div className="card-image">
+                  <img src={CardIcon1} alt="icon-one" />
+                </div>
+                <div className="card-users">
+                  <h2>USERS</h2>
+                </div>
+                <div className="card-number">
+                2,453
+                </div>
+              </div>
+
+              <div className="cards-contents">
+                <div className="card-image">
+                  <img src={CardIcon2} alt="icon-one" />
+                </div>
+                <div className="card-users">
+                  <h2>ACTIVE USERS</h2>
+                </div>
+                <div className="card-number">
+                2,453
+                </div>
+              </div>
+
+              <div className="cards-contents">
+                <div className="card-image">
+                  <img src={CardIcon3} alt="icon-one" />
+                </div>
+                <div className="card-users">
+                  <h2>USERS WITH LOANS</h2>
+                </div>
+                <div className="card-number">
+                12,453
+                </div>
+              </div>
+
+              <div className="cards-contents">
+                <div className="card-image">
+                  <img src={CardIcon4} alt="icon-one" />
+                </div>
+                <div className="card-users">
+                  <h2>USERS WITH SAVINGS</h2>
+                </div>
+                <div className="card-number">
+                102,453
+                </div>
+              </div>
+
+              </div>
+              <div className="tableData-wrap">
+                <TableData />
               </div>
             </div>
           </Content>

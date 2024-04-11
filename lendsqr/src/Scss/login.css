@@ -5,7 +5,7 @@
 }
 
 .header-wrap {
-  border: 5px solid red;
+  border: 2px solid blue;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -36,13 +36,46 @@
   width: 30px;
 }
 
-.contents-wrap {
-  border: 2px solid green;
+.contents-wrap h1 {
+  color: #213F7D;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 20px 0;
 }
-.contents-wrap > .cards-wrap {
-  border: 2px solid green;
-  width: 240px;
-  height: 160px;
+.contents-wrap .card-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  row-gap: 15px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  width: 100%;
+}
+.contents-wrap .card-wrap > .cards-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 209px;
+  height: 130px;
   border-radius: 4px 0px 0px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.194);
+  row-gap: 10px;
   opacity: 0px;
+  padding: 15px;
+}
+.contents-wrap .card-wrap > .cards-contents .card-image img {
+  background-color: rgba(224, 24, 255, 0.1960784314);
+  border-radius: 50%;
+  width: 30px;
+}
+.contents-wrap .card-wrap > .cards-contents > .card-users h2 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.contents-wrap .card-wrap > .cards-contents > .card-number {
+  font-size: 18px;
+  font-weight: 700;
+}
+.contents-wrap > .tableData-wrap {
+  margin-top: 50px;
 }/*# sourceMappingURL=login.css.map */
